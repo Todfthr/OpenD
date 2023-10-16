@@ -4,17 +4,16 @@
       "main": "src/DNFT_backend/main.mo",
       "type": "motoko"
     },
+    "nft": {
+      "main": "src/NFT/nft.mo",
+      "type": "motoko"
+    },
     "DNFT_frontend": {
-      "dependencies": [
-        "DNFT_backend"
-      ],
+      "dependencies": ["DNFT_backend"],
       "frontend": {
         "entrypoint": "src/DNFT_frontend/src/index.html"
       },
-      "source": [
-        "src/DNFT_frontend/assets",
-        "dist/DNFT_frontend/"
-      ],
+      "source": ["src/DNFT_frontend/assets", "dist/DNFT_frontend/"],
       "type": "assets"
     }
   },
@@ -24,6 +23,10 @@
       "packtool": ""
     }
   },
+  "http": {
+    "port": 8080
+  },
+
   "output_env_file": ".env",
   "version": 1
 }
